@@ -1,0 +1,16 @@
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\remote\ControllerServer.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\remote\ProxyShell.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\remote\ShellBase.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\remote\ContextBase.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\state\IState.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\state\State.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\remote\ControllerClient.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\main\LocalContext.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\main\IContext.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\remote\CommandLineDecoder.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\main\IShell.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\remote\ShellManager.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\remote\CommandLineEncoder.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\remote\ProxyContext.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\remote\SessionManager.java
+N:\CS 549\Assignment4-Code\shell\src\edu\stevens\cs549\shell\main\LocalShell.java

@@ -1,0 +1,17 @@
+edu\stevens\cs549\shell\main\LocalContext.class
+edu\stevens\cs549\shell\remote\ProxyContext.class
+edu\stevens\cs549\shell\remote\CommandLineEncoder.class
+edu\stevens\cs549\shell\remote\ContextBase.class
+edu\stevens\cs549\shell\remote\SessionManager.class
+edu\stevens\cs549\shell\remote\ProxyShell.class
+edu\stevens\cs549\shell\remote\ShellBase.class
+edu\stevens\cs549\shell\main\IShell.class
+edu\stevens\cs549\shell\remote\CommandLineDecoder.class
+edu\stevens\cs549\shell\main\LocalShell.class
+edu\stevens\cs549\shell\remote\ShellManager.class
+edu\stevens\cs549\shell\remote\ControllerClient.class
+edu\stevens\cs549\shell\main\LocalShell$Dispatch.class
+edu\stevens\cs549\shell\state\IState.class
+edu\stevens\cs549\shell\remote\ControllerServer.class
+edu\stevens\cs549\shell\state\State.class
+edu\stevens\cs549\shell\main\IContext.class

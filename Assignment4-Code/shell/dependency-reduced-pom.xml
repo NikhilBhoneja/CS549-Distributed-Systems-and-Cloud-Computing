@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.stevens.cs549</groupId>
+  <artifactId>shell</artifactId>
+  <name>Remotely controlled shell.</name>
+  <version>0.0.1-SNAPSHOT</version>
+  <description>Implements a network node with which can be remotely
+        controlled by a client.</description>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <filtering>true</filtering>
+        <directory>resources</directory>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>java</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <mainClass>edu.stevens.cs549.shell.main.LocalContext</mainClass>
+          <systemProperties>
+            <systemProperty>
+              <key>jersey.test.port</key>
+              <value>${server.port.http}</value>
+            </systemProperty>
+          </systemProperties>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers />
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <transformers>
+            <transformer>
+              <manifestEntries>
+                <Main-Class>edu.stevens.cs549.shell.main.LocalContext</Main-Class>
+                <Build-Number>1</Build-Number>
+              </manifestEntries>
+            </transformer>
+            <transformer />
+          </transformers>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <tasks>
+                <delete />
+                <copy />
+              </tasks>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <profiles>
+    <profile>
+      <id>not-mac</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.sun</groupId>
+          <artifactId>tools</artifactId>
+          <version>1.5</version>
+          <scope>system</scope>
+          <systemPath>${java.home}/../lib/tools.jar</systemPath>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
+  <properties>
+    <server.name>shell</server.name>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <server.external-dns>localhost</server.external-dns>
+    <server.client.name>*anon*</server.client.name>
+    <server.testdir>${server.home}/tmp/cs549/shell-test</server.testdir>
+    <server.home>${user.home}</server.home>
+    <server.port.ws>8181</server.port.ws>
+    <server.dist>${server.testdir}</server.dist>
+    <server.port.http>8080</server.port.http>
+  </properties>
+</project>
+
